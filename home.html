@@ -20,7 +20,7 @@
             </button>
           
             <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-             <div class="d-flex">
+             <div class="d-flex menu">
                 <a href="home.html"><button class="btn" type="button"><i class="bi bi-house-door-fill fs-4 color-secondary"></i></button></a>
                 <a href="transactions.html"><button class="btn" type="button"><i class="bi bi-currency-exchange fs-4 "></i></button></a>
                 
@@ -28,8 +28,8 @@
                     <button class="btn" type="button" id="dropdownMenuButton1" data-toggle="dropdown" aria-expanded="false">
                         <i class="bi bi-person-circle fs-4"></i>
                     </button>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                      <li><a class="dropdown-item" href="#">Sair</a></li>
+                        <ul class="dropdown-menu logout" aria-labelledby="dropdownMenuButton1">
+                      <li><button class="dropdown-item" id="button-logout">Sair</button></li>
                         </ul>
                   </div>
             </div>
@@ -42,7 +42,7 @@
             <div class="row ">
                 <div class="col d-flex m-5 justify-content-start align-items-center">
                     <i class="bi bi-cash-coin color-primary icon-detail"></i>
-                    <span class="tamanho-fonte">R$ 0,00</span>
+                    <span class="tamanho-fonte" id="total">R$ 0,00</span>
                 </div>
                 <div class="col d-flex m-5 justify-content-end">
                     <div class="text-center">
@@ -66,25 +66,18 @@
                          </div>
                          <div class="row">
                             <div class="col-6">
-                                <div class="container">
-                                    <div class="row">
-                                        <div class="col">
-                                            R$ 1000,00
-                                        </div>
-                                    </div>
+                                <div class="container p-0" id="cash-in-list">
+                                    
                                 </div>
                             </div>
                             <div class="col-6">
-                                <div class="container">
-                                    <div class="row">
-                                        <div class="col">
-                                            R$ 500,00
-                                        </div>
+                                <div class="container p-0" id="cash-out-list">
+                                    
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-12">
-                                <button type="button" class="btn button-default"> Ver todas</button>
+                            <div class="col-12 mb-4">
+                                <button type="button" class="btn button-default " id="transactions-button"> Ver todas</button>
                             </div>
                          </div>
                        </div>
@@ -107,16 +100,16 @@
                     
                         <div class="form-group">
                           <label for="value-input">Valor</label>
-                          <input type="number" class="form-control" id="value-input" aria-describedby="emailHelp" placeholder="">
+                          <input type="number" step="any" class="form-control" id="value-input" aria-describedby="emailHelp" required placeholder="">
                         </div>
                         <div class="form-group">
                           <label for="description-input">Descrição</label>
-                          <input type="text" class="form-control" id="description-input" placeholder="">
+                          <input type="text" class="form-control" id="description-input"  required placeholder="">
                           
                         </div>
                         <div class="form-group">
                             <label for="date-input">Data</label>
-                            <input type="date" class="form-control" id="date-input" placeholder="Senha">
+                            <input type="date" class="form-control" id="date-input" required placeholder="Senha">
                         
                           </div>
                           <div class="mb3">
@@ -142,5 +135,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+    <script src="./js/home.js"></script>
 </body>
 </html>
